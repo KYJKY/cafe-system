@@ -8,8 +8,8 @@ async function bootstrap() {
 
   // Swagger
   const config = new DocumentBuilder()
-    .setTitle('Nest-Task-Management')
-    .setDescription('Task Management API description')
+    .setTitle('Cafe-System')
+    .setDescription('Cafe System API description')
     .setVersion('1.0')
     .addBearerAuth(
       {
@@ -27,6 +27,6 @@ async function bootstrap() {
   // Global Pipe
   app.useGlobalPipes(new ValidationPipe());
 
-  await app.listen(process.env.PORT ?? 3000);
+  await app.listen(process.env.APP_PORT ?? 3000);
 }
 bootstrap();
